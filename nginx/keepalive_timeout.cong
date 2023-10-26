@@ -1,0 +1,26 @@
+
+user mohsen;
+worker_processes auto;
+events {}
+
+http {
+       
+      
+       keepalive_timeout 20s 18s;
+       keepalive_requests 20;
+       keepalive_disable msie6 safari;
+       send_timeout 30s;
+       client_header_timeout 30s;
+
+  
+       server{
+             server_name 127.0.0.1;
+             listen 81;
+             root /home/mohsen/www/;
+             index web.html;
+ 
+         }
+          
+      
+       
+     }
